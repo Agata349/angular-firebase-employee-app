@@ -16,13 +16,15 @@ import { ListEmployeesComponent } from './components/list-employees/list-employe
 import { CreateEmployeeComponent } from './components/create-employee/create-employee.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { environment } from 'src/environments/environment';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ListEmployeesComponent,
     CreateEmployeeComponent,
-    NavbarComponent
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
