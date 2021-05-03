@@ -1,0 +1,32 @@
+<div class="container mt-4">
+    <div class="card">
+        <div class="card-body">
+            <span class="h3">REGISTER OF EMPLOYEES</span>
+            <button class="btn btn-dark btn-lg float-end" routerLink="/create-employee">Add</button> 
+            <h4 style="margin-top: 30px;" *ngIf="employees.length == 0">There is no data</h4>
+            <table *ngIf='employees.length > 0' class="table table-striped mt-5">
+                <thead>
+                    <tr>
+                        <th>Forename</th>
+                        <th>Surname</th>
+                        <th>Document</th>
+                        <th>Salary</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let employee of employees">
+                        <td> {{employee.forename}} </td>
+                        <td> {{employee.surname}} </td>
+                        <td> {{employee.document}} </td>
+                        <td> {{employee.salary | currency}} </td>
+                        <td>
+                            <i class="far fa-edit fa-lg text-info" [routerLink]="['/edit-employee/', employee.id]"></i>
+                            <i (click)='deleteEmployee(employee.id)' class="far fa-trash-alt fa-lg text-danger"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
