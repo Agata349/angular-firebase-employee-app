@@ -1,0 +1,77 @@
+[debug] [2022-11-16T18:54:39.928Z] ----------------------------------------------------------------------
+[debug] [2022-11-16T18:54:39.935Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Agata\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-11-16T18:54:39.937Z] CLI Version:   9.11.0
+[debug] [2022-11-16T18:54:39.937Z] Platform:      win32
+[debug] [2022-11-16T18:54:39.938Z] Node Version:  v16.15.0
+[debug] [2022-11-16T18:54:39.949Z] Time:          Wed Nov 16 2022 19:54:39 GMT+0100 (Central European Standard Time)
+[debug] [2022-11-16T18:54:39.950Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-16T18:54:39.995Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-16T18:54:39.996Z] > authorizing via signed-in user (agata.piekarczyk90@gmail.com)
+[debug] [2022-11-16T18:54:39.997Z] [iam] checking project employees-7f103 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-16T18:54:40.005Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-11-16T18:54:40.010Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-11-16T18:54:40.716Z] <<< HTTP RESPONSE 400 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Wed, 16 Nov 2022 18:54:32 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-11-16T18:54:40.720Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/employees-7f103:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-16T18:54:41.772Z] <<< HTTP RESPONSE 401 {"www-authenticate":"Bearer realm=\"https://accounts.google.com/\", error=\"invalid_token\"","vary":"X-Origin, Referer, Origin,Accept-Encoding","content-type":"application/json; charset=UTF-8","date":"Wed, 16 Nov 2022 18:54:33 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=688","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-11-16T18:54:41.773Z] <<< HTTP RESPONSE BODY {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"service":"cloudresourcemanager.googleapis.com","method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions"}}]}}
+[debug] [2022-11-16T18:54:41.775Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2022-11-16T18:54:41.779Z] > refreshing access token with scopes: []
+[debug] [2022-11-16T18:54:41.779Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-11-16T18:54:42.194Z] <<< HTTP RESPONSE 400 {"date":"Wed, 16 Nov 2022 18:54:34 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-11-16T18:54:42.198Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/employees-7f103 [none]
+[debug] [2022-11-16T18:54:42.619Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/employees-7f103 401
+[debug] [2022-11-16T18:54:42.621Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/employees-7f103 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2022-11-16T18:54:42.621Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2022-11-16T18:54:42.626Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at module.exports (C:\Users\Agata\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:38:12)
+    at Client.doRequest (C:\Users\Agata\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:238:23)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Client.request (C:\Users\Agata\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:96:20)
+    at async Object.getFirebaseProject (C:\Users\Agata\AppData\Roaming\npm\node_modules\firebase-tools\lib\management\projects.js:290:21)
+    at async Object.getDefaultHostingSite (C:\Users\Agata\AppData\Roaming\npm\node_modules\firebase-tools\lib\getDefaultHostingSite.js:8:21)
+    at async requireHostingSite (C:\Users\Agata\AppData\Roaming\npm\node_modules\firebase-tools\lib\requireHostingSite.js:9:18)
+    at async Object.fn (C:\Users\Agata\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\deploy.js:66:9)
+    at async C:\Users\Agata\AppData\Roaming\npm\node_modules\firebase-tools\lib\command.js:169:17
+[error] 
+[error] Error: Failed to get Firebase project employees-7f103. Please make sure the project exists and your account has permission to access it.
+[debug] [2022-11-16T19:02:26.407Z] ----------------------------------------------------------------------
+[debug] [2022-11-16T19:02:26.411Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Agata\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-11-16T19:02:26.412Z] CLI Version:   11.16.1
+[debug] [2022-11-16T19:02:26.412Z] Platform:      win32
+[debug] [2022-11-16T19:02:26.413Z] Node Version:  v16.15.0
+[debug] [2022-11-16T19:02:26.421Z] Time:          Wed Nov 16 2022 20:02:26 GMT+0100 (Central European Standard Time)
+[debug] [2022-11-16T19:02:26.422Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-16T19:02:26.615Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-16T19:02:26.617Z] > authorizing via signed-in user (agata.piekarczyk90@gmail.com)
+[debug] [2022-11-16T19:02:26.617Z] [iam] checking project employees-7f103 for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-16T19:02:26.624Z] > refreshing access token with scopes: []
+[debug] [2022-11-16T19:02:26.632Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-11-16T19:02:26.632Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-16T19:02:27.224Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2022-11-16T19:02:27.225Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-16T19:02:27.227Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/employees-7f103:testIamPermissions [none]
+[debug] [2022-11-16T19:02:27.228Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/employees-7f103:testIamPermissions x-goog-quota-user=projects/employees-7f103
+[debug] [2022-11-16T19:02:27.228Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/employees-7f103:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-16T19:02:28.787Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/employees-7f103:testIamPermissions 401
+[debug] [2022-11-16T19:02:28.787Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/employees-7f103:testIamPermissions {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"ACCESS_TOKEN_TYPE_UNSUPPORTED","metadata":{"method":"google.cloudresourcemanager.v1.Projects.TestIamPermissions","service":"cloudresourcemanager.googleapis.com"}}]}}
+[debug] [2022-11-16T19:02:28.790Z] [iam] error while checking permissions, command may fail: FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2022-11-16T19:02:28.790Z] > refreshing access token with scopes: []
+[debug] [2022-11-16T19:02:28.791Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2022-11-16T19:02:28.791Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-16T19:02:28.965Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 400
+[debug] [2022-11-16T19:02:28.965Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2022-11-16T19:02:28.967Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/employees-7f103 [none]
+[debug] [2022-11-16T19:02:29.197Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/employees-7f103 401
+[debug] [2022-11-16T19:02:29.198Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/employees-7f103 {"error":{"code":401,"message":"Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.","status":"UNAUTHENTICATED"}}
+[debug] [2022-11-16T19:02:29.199Z] HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+[debug] [2022-11-16T19:02:29.204Z] FirebaseError: HTTP Error: 401, Request had invalid authentication credentials. Expected OAuth 2 access token, login cookie or other valid authentication credential. See https://developers.google.com/identity/sign-in/web/devconsole-project.
+    at responseToError (C:\Users\Agata\AppData\Roaming\npm\node_modules\firebase-tools\lib\responseToError.js:49:12)
+    at RetryOperation._fn (C:\Users\Agata\AppData\Roaming\npm\node_modules\firebase-tools\lib\apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to get Firebase project employees-7f103. Please make sure the project exists and your account has permission to access it.
