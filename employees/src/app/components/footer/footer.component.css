@@ -1,8 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap");
 
+
 footer {
-  margin-top: 15px;
+  position:absolute;
+  bottom:0;
+  width: 100%;
   text-align: center;
+  display: block;
+  margin: 0 auto;
   color: #fff;
-  font-family: "Nanum Gothic Coding", monospace;
+  font-family: "Nanum Gothic Coding", monospace  
 }
